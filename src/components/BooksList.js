@@ -1,7 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Book from './Book';
 
-function BooksList() {
+function mapStateToProps(state) {
+  return {
+    books: state.books,
+  };
+}
+
+function BooksList({ books }) {
   return (
     <table>
       <tr>
@@ -9,11 +17,19 @@ function BooksList() {
         <th>Book Title</th>
         <th>Book Category</th>
       </tr>
-      <tr>
-        <Book book="hello" />
-      </tr>
+      {books.map(b => <Book key={b.id} book={b} />)}
     </table>
   );
 }
 
-export default BooksList;
+BooksList.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
+
+export default connect(mapStateToProps, null)(BooksList);

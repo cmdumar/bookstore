@@ -1,16 +1,19 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 function Book({ book }) {
   return (
-    <div>
-      Book
-      {book}
-    </div>
+    <>
+      <tr>
+        <td>{book.id}</td>
+        <td>{book.title}</td>
+        <td>{book.category}</td>
+      </tr>
+    </>
   );
 }
 
 Book.propTypes = {
-  book: propTypes.string.isRequired,
+  book: PropTypes.string.isRequired,
 };
 
 export default Book;
