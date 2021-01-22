@@ -3,24 +3,20 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from './Book';
 
-function mapStateToProps(state) {
-  return {
-    books: state.books,
-  };
-}
+const mapStateToProps = state => (
+  { books: state.books }
+);
 
-function BooksList({ books }) {
-  return (
-    <table>
-      <tr>
-        <th>Book ID</th>
-        <th>Book Title</th>
-        <th>Book Category</th>
-      </tr>
-      {books.map(b => <Book key={b.id} book={b} />)}
-    </table>
-  );
-}
+const BooksList = ({ books }) => (
+  <table>
+    <tr>
+      <th>Book ID</th>
+      <th>Book Title</th>
+      <th>Book Category</th>
+    </tr>
+    {books.map(b => <Book key={b.id} book={b} />)}
+  </table>
+);
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(

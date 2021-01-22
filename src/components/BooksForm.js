@@ -1,4 +1,4 @@
-function BooksForm() {
+const BooksForm = () => {
   const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
     <form>
@@ -14,6 +14,6 @@ function BooksForm() {
       <input name="submit" type="submit" />
     </form>
   );
-}
+};
 
 export default BooksForm;
