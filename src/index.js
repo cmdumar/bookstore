@@ -4,12 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers/books';
 import App from './components/App';
-
-const randomID = () => {
-  const min = Math.ceil(0);
-  const max = Math.floor(99999999);
-  return Math.floor(Math.random() * (max - min) + min);
-};
+import randomID from './helpers/randomID';
 
 const state = {
   books: [
