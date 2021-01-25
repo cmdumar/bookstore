@@ -7,7 +7,7 @@ function CategoryFilter({ filter }) {
 
   const handleChange = e => {
     setCategory(e.target.value);
-    filter(category);
+    filter(e.target.value);
   };
 
   return (

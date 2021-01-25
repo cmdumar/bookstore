@@ -13,7 +13,7 @@ const state = {
     { id: randomID(), title: 'A Short History Of The World', category: 'History' },
     { id: randomID(), title: 'Lord of The Rings', category: 'Sci-Fi' },
   ],
-  filter: 'Action',
+  filter: 'ALL',
 };
 
 const store = createStore(rootReducer, state);

@@ -6,16 +6,25 @@ import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from './CategoryFilter';
 
 const mapStateToProps = state => (
-  { books: state.books }
+  { books: state.books, filter: state.filter }
 );
 
-const BooksList = ({ books, removeBook, changeFilter }) => {
+const BooksList = ({
+  books, filter, removeBook, changeFilter,
+}) => {
   const handleRemove = book => {
     removeBook(book);
   };
 
   const handleFilterChange = category => {
     changeFilter(category);
+  };
+
+  const categoryFilter = () => {
+    if (filter !== 'ALL') {
+      return books.filter(b => b.category === filter);
+    }
+    return books;
   };
 
   return (
@@ -31,7 +40,7 @@ const BooksList = ({ books, removeBook, changeFilter }) => {
           </tr>
         </thead>
         <tbody>
-          {books.map(b => <Book key={b.id} book={b} handleRemove={handleRemove} />)}
+          {categoryFilter().map(b => <Book key={b.id} book={b} handleRemove={handleRemove} />)}
         </tbody>
       </table>
     </>
@@ -48,6 +57,7 @@ BooksList.propTypes = {
   ).isRequired,
   removeBook: PropTypes.func.isRequired,
   changeFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, { removeBook, changeFilter })(BooksList);
