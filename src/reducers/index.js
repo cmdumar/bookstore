@@ -1,8 +1,10 @@
-const mainReducer = (state, action) => {
-  if (action.type) {
-    return { ...state };
-  }
-  return state;
-};
+import { combineReducers } from 'redux';
+import books from './books';
+import filter from './filter';
 
-export default mainReducer;
+const rootReducer = combineReducers({
+  books,
+  filter,
+});
+
+export default rootReducer;
