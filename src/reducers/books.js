@@ -1,15 +1,21 @@
-const reducer = (state = {}, action) => {
-  const index = state.books.indexOf(action.book);
-  const books = state.books.slice();
+const initialState = {
+  books: [],
+};
+
+const books = (state = initialState, action) => {
+  let index;
+  let books;
   switch (action.type) {
     case 'CREATE_BOOK':
-      return { ...state, books: [...state.books, action.book] };
+      return [...state, action.book];
     case 'REMOVE_BOOK':
+      index = state.indexOf(action.book);
+      books = state.slice();
       books.splice(index, 1);
-      return { ...state, books };
+      return books;
     default:
       return state;
   }
 };
 
-export default reducer;
+export default books;

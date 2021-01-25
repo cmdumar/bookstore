@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from './reducers/books';
+import rootReducer from './reducers/index';
 import App from './components/App';
 import randomID from './helpers/randomID';
 
@@ -13,9 +13,10 @@ const state = {
     { id: randomID(), title: 'A Short History Of The World', category: 'History' },
     { id: randomID(), title: 'Lord of The Rings', category: 'Sci-Fi' },
   ],
+  filter: 'ALL',
 };
 
-const store = createStore(reducer, state);
+const store = createStore(rootReducer, state);
 
 ReactDOM.render(
   <React.StrictMode>
