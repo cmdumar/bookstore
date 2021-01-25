@@ -12,7 +12,6 @@ function CategoryFilter({ filter }) {
 
   return (
     <select value={category} onChange={handleChange}>
-      <option value="ALL">ALL</option>
       {CATEGORIES.map(cat => (
         <option key={cat} value={cat}>{cat}</option>
       ))}
