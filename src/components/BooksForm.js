@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 import randomID from '../helpers/randomID';
 
+const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+
 const BooksForm = ({ createBook }) => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Action');
@@ -26,7 +28,6 @@ const BooksForm = ({ createBook }) => {
     }
   };
 
-  const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="title">
@@ -48,3 +49,4 @@ BooksForm.propTypes = {
 };
 
 export default connect(null, { createBook })(BooksForm);
+export { CATEGORIES };
