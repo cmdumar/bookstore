@@ -1,0 +1,47 @@
+nav {
+  background-color: white;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 99px 27px 100px;
+  min-height: 95px;
+  border: solid 1px #e8e8e8;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.logo-container h2 {
+  font-size: 30px;
+  color: #0290ff;
+  margin-right: 47px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.9px;
+}
+
+.nav-links li {
+  padding: 0 10px;
+}
+
+.profile-pic img {
+  border: 1px solid #e8e8e8;
+  height: 45px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 45px;
+  padding: 10px;
+}
