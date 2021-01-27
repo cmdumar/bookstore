@@ -5,7 +5,7 @@ import { createBook } from '../actions/index';
 import randomID from '../helpers/randomID';
 
 const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-const allCategories = ['ALL', ...CATEGORIES];
+// const allCategories = ['ALL', ...CATEGORIES];
 
 const BooksForm = ({ createBook }) => {
   const [title, setTitle] = useState('');
@@ -37,7 +37,7 @@ const BooksForm = ({ createBook }) => {
       </label>
 
       <select value={category} onChange={handleSelect}>
-        {allCategories.map(i => <option value={i} key={i}>{i}</option>)}
+        {CATEGORIES.map(i => <option value={i} key={i}>{i}</option>)}
       </select>
 
       <input name="submit" type="submit" />

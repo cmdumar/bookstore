@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { CATEGORIES } from './BooksForm';
 
+const allCategories = ['ALL', ...CATEGORIES];
+
 function CategoryFilter({ filter }) {
   const [category, setCategory] = useState('ALL');
 
@@ -12,7 +14,7 @@ function CategoryFilter({ filter }) {
 
   return (
     <select value={category} onChange={handleChange}>
-      {CATEGORIES.map(cat => (
+      {allCategories.map(cat => (
         <option key={cat} value={cat}>{cat}</option>
       ))}
     </select>
