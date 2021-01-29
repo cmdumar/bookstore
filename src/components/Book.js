@@ -5,23 +5,31 @@ const Book = ({ book, handleRemove }) => (
   <>
     <div className="card">
       <div className="book-data">
-        <p>{book.category}</p>
+        <p className="sans-serif">{book.category}</p>
         <h2>{book.title}</h2>
-        <p>Suzenne</p>
+        <p className="blue-text">Suzenne</p>
 
         <div className="btns">
           <button type="button" onClick={() => handleRemove(book)}>Comments</button>
+          <div className="line-2" />
           <button type="button" onClick={() => handleRemove(book)}>Remove</button>
+          <div className="line-2" />
           <button type="button" onClick={() => handleRemove(book)}>Edit</button>
         </div>
       </div>
       <div className="meta-data">
         <div className="progress">
-          <div>Progress</div>
+          <div className="oval" />
+          <div>
+            <h2>64%</h2>
+            <p>Completed</p>
+          </div>
         </div>
         <div className="vertical-border" />
         <div className="chapter-data">
-          <div>Current</div>
+          <p className="current-text">Current Chapter</p>
+          <p>Chapter 17</p>
+          <button type="button">UPDATE PROGRESS</button>
         </div>
       </div>
     </div>

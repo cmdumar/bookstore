@@ -6,9 +6,11 @@
 
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 .container {
-  background-color: #f5f6fa;
+  background-color: #fafafa;
   width: 100%;
 }
