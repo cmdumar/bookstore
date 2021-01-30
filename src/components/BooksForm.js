@@ -21,7 +21,7 @@ const BooksForm = ({ createBook }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (title != null && category != null) {
+    if (title !== '') {
       const book = { id: randomID(), title, category };
       createBook(book);
       setTitle('');
@@ -31,18 +31,22 @@ const BooksForm = ({ createBook }) => {
 
   return (
     <>
+      <div className="line" />
       <h2 className="add-title">ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">
-          Title
-          <input name="title" type="text" onChange={handleChange} value={title} />
-        </label>
-
+        <input
+          className="title"
+          name="title"
+          type="text"
+          onChange={handleChange}
+          value={title}
+          placeholder="Book title"
+        />
         <select value={category} onChange={handleSelect}>
           {CATEGORIES.map(i => <option value={i} key={i}>{i}</option>)}
         </select>
 
-        <input name="submit" type="submit" />
+        <button name="submit" type="submit">SUBMIT</button>
       </form>
     </>
   );

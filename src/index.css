@@ -8,9 +8,9 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  background-color: #fafafa;
 }
 
 .container {
-  background-color: #fafafa;
-  width: 100%;
+  margin: 37px 100px 0;
 }

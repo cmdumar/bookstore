@@ -3,11 +3,13 @@ import BooksList from './BooksList';
 import BooksForm from './BooksForm';
 
 const App = () => (
-  <div className="container">
+  <>
     <Navbar />
-    <BooksList />
-    <BooksForm />
-  </div>
+    <div className="container">
+      <BooksList />
+      <BooksForm />
+    </div>
+  </>
 );
 
 export default App;

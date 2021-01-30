@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { CATEGORIES } from './BooksForm';
+import './CategoryFilter.css';
 
 const allCategories = ['ALL', ...CATEGORIES];
 

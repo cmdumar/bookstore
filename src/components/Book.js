@@ -10,11 +10,11 @@ const Book = ({ book, handleRemove }) => (
         <p className="blue-text">Suzenne</p>
 
         <div className="btns">
-          <button type="button" onClick={() => handleRemove(book)}>Comments</button>
+          <button type="button">Comments</button>
           <div className="line-2" />
           <button type="button" onClick={() => handleRemove(book)}>Remove</button>
           <div className="line-2" />
-          <button type="button" onClick={() => handleRemove(book)}>Edit</button>
+          <button type="button">Edit</button>
         </div>
       </div>
       <div className="meta-data">
