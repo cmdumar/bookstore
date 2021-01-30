@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://microverse-bookstore-react.herokuapp.com/)
+[Live Demo Link](https://bookstore-cms.netlify.app/)
 
 ## Getting Started
 
