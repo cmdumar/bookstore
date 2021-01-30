@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 import randomID from '../helpers/randomID';
+import './BooksForm.css';
 
 const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-// const allCategories = ['ALL', ...CATEGORIES];
 
 const BooksForm = ({ createBook }) => {
   const [title, setTitle] = useState('');
@@ -21,7 +21,7 @@ const BooksForm = ({ createBook }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (title != null && category != null) {
+    if (title !== '') {
       const book = { id: randomID(), title, category };
       createBook(book);
       setTitle('');
@@ -30,18 +30,25 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="title">
-        Title
-        <input name="title" type="text" onChange={handleChange} value={title} />
-      </label>
+    <>
+      <div className="line" />
+      <h2 className="add-title">ADD NEW BOOK</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          className="title"
+          name="title"
+          type="text"
+          onChange={handleChange}
+          value={title}
+          placeholder="Book title"
+        />
+        <select value={category} onChange={handleSelect}>
+          {CATEGORIES.map(i => <option value={i} key={i}>{i}</option>)}
+        </select>
 
-      <select value={category} onChange={handleSelect}>
-        {CATEGORIES.map(i => <option value={i} key={i}>{i}</option>)}
-      </select>
-
-      <input name="submit" type="submit" />
-    </form>
+        <button name="submit" type="submit">SUBMIT</button>
+      </form>
+    </>
   );
 };
 

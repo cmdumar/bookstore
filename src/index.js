@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 import App from './components/App';
 import randomID from './helpers/randomID';
+import './index.css';
 
 const state = {
   books: [
