@@ -1,54 +1,39 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Bookstore CMS
 
 > A Bookstore Catalog made with React and Redux.
 
+## Screenshot
 
-Additional description about the project and its features.
+![Screenshot](/public/screenshot.png)
 
 ## Built With
 
 - React, Redux
 - HTML, CSS
-- create-react-app, npm
+- CRA, npm
 
 ## Live Demo
 
 [Live Demo Link](https://microverse-bookstore-react.herokuapp.com/)
 
-
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+## Prerequisites
 
 * Node JS
 
-### Setup
+## To run the Project
 
-### Install
-
-`npm install`
-
-### Usage
-
-### Run tests
-
-`npm test`
-
-### Deployment
-
-- [Heroku](https://microverse-bookstore-react.herokuapp.com/)
+* Run `git clone https://github.com/mohammadumar28/bookstore.git` to clone the project
+* Go to the cloned directory
+* Run `npm install` to install node modules
+* Run `npm start` to start the app
 
 ## Authors
 
-👤 **Author1**
+👤 **Muhammad Umar**
 
 - GitHub: [@mohammadumar28](https://github.com/mohammadumar28)
 - Twitter: [@Mohammadumar28](https://twitter.com/Mohammadumar28)
